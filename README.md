@@ -12,12 +12,23 @@ geohelper = { git = "https://github.com/krishpranav/geohelper" }
 ```rust
 use geohelper::Location;
 
-let l1 = Location::new(27.740068, 85.337576);
-let l2 = Location::new(27.740286, 85.337059);
-let distance = l1.distance_to(&l2);
+fn main() {
+    /**
+     * random cordinates of two location
+     */
+    let location1 = Location::new(27.740068, 85.337576);
+    let location2 = Location::new(27.740286, 85.337059);
 
-println!("Distance: {}", distance.meters());
+    /**
+     * calculate the distance between the two location
+     */
+    let distance = location1.distance_to(&location2).unwrap();
 
+    /**
+     * print them out!!
+     */
+    println!("Distance: {}", distance.meters());
+}
 ```
 
 ## License:
