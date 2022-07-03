@@ -14,7 +14,7 @@ use geohelper::Location;
 
 fn main() {
     /**
-     * random cordinates of two location
+     * random coordinates of two location
      */
     let location1 = Location::new(27.740068, 85.337576);
     let location2 = Location::new(27.740286, 85.337059);
@@ -30,6 +30,8 @@ fn main() {
     println!("Distance: {}", distance.meters());
 }
 ```
+
+- for more tutorial visit the [docs](https://github.com/krishpranav/geohelper/blob/master/docs/geohelper.md)
 
 ## License:
 - geohelper is licensed under [GPL-2.0 License](https://github.com/krishpranav/geohelper/blob/master/LICENSE)
