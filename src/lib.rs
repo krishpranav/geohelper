@@ -1,14 +1,18 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+pub struct Location(f64, f64);
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+impl Location {
+    pub fn new<T: Into<f64>>(lat: T, lon: T) -> Self {
+        Location(lat.into(), lon.into())
+    }
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
+    pub fn latitude(&self) -> f64 {
+        self.0
+    }
+
+    pub fn longitude(&self) -> f64 {
+        self.1
+    }
+
+    pub fn distance_to(&self, to: &Location) -> Result<Distance, String> {
     }
 }
